@@ -92,9 +92,7 @@
     }
   },
   "fonts": {
-    "family": "Plaid Sans",
-    "source": "/fonts/PlaidSans-Regular.woff2",
-    "format": "woff2",
+    "family": "Inter",
     "weight": 400
   },
   "logo": {

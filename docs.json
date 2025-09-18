@@ -16,6 +16,10 @@
           {
             "group": "Getting started",
             "pages": ["index", "quickstart", "link"]
+          },
+          {
+            "group": "Payments and Funding",
+            "pages": ["auth/index"]
           }
         ]
       },

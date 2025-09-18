@@ -95,7 +95,7 @@
     "family": "Plaid Sans",
     "source": "/fonts/PlaidSans-Regular.woff2",
     "format": "woff2",
-    "weight": 450
+    "weight": 400
   },
   "logo": {
     "light": "/logo/docs-logo-light.svg",

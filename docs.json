@@ -27,33 +27,21 @@
             "pages": ["api-reference/overview", "api-reference/libraries"]
           },
           {
-            "group": "Auth",
+            "group": "Payments and Funding",
             "openapi": {
-              "source": "openapi/Auth.json"
-            },
-            "pages": [
-              "POST /auth/get",
-              "POST /bank_transfer/event/list",
-              "POST /bank_transfer/event/sync"
-            ]
-          },
-          {
-            "group": "Balance",
-            "openapi": {
-              "source": "openapi/Balance.json"
-            }
-          },
-
-          {
-            "group": "Identity",
-            "openapi": {
-              "source": "openapi/Identity.json"
+              "source": "openapi/CategoryPayments.json"
             }
           },
           {
-            "group": "Signal",
+            "group": "Transfer",
             "openapi": {
-              "source": "openapi/Signal.json"
+              "source": "openapi/CategoryTransfer.json"
+            }
+          },
+          {
+            "group": "Financial Insights",
+            "openapi": {
+              "source": "openapi/CategoryFinancialInsights.json"
             }
           }
         ]

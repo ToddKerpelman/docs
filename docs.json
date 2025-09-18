@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "palm",
+  "name": "Doc Hard: With a Vengeance",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#10D1B7",
+    "light": "#CCF8FF",
+    "dark": "#05565C"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon-32x32.png",
   "navigation": {
     "tabs": [
       {
@@ -15,35 +15,7 @@
         "groups": [
           {
             "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
+            "pages": ["index", "quickstart", "link"]
           }
         ]
       },
@@ -51,18 +23,70 @@
         "tab": "API reference",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Introduction",
+            "pages": ["api-reference/overview", "api-reference/libraries"]
+          },
+          {
+            "group": "Auth",
+            "openapi": {
+              "source": "openapi/Auth.json"
+            },
             "pages": [
-              "api-reference/introduction"
+              "POST /auth/get",
+              "POST /bank_transfer/event/list",
+              "POST /bank_transfer/event/sync"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Balance",
+            "openapi": {
+              "source": "openapi/Balance.json"
+            }
+          },
+
+          {
+            "group": "Identity",
+            "openapi": {
+              "source": "openapi/Identity.json"
+            }
+          },
+          {
+            "group": "Signal",
+            "openapi": {
+              "source": "openapi/Signal.json"
+            }
+          }
+        ]
+      },
+      {
+        "tab": "Mintlify",
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": ["development"]
+          },
+          {
+            "group": "Customization",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "mintlify/essentials/settings",
+              "mintlify/essentials/navigation"
+            ]
+          },
+          {
+            "group": "Writing content",
+            "pages": [
+              "mintlify/essentials/markdown",
+              "mintlify/essentials/code",
+              "mintlify/essentials/images",
+              "mintlify/essentials/reusable-snippets"
+            ]
+          },
+          {
+            "group": "AI tools",
+            "pages": [
+              "mintlify/ai-tools/cursor",
+              "mintlify/ai-tools/claude-code",
+              "mintlify/ai-tools/windsurf"
             ]
           }
         ]
@@ -71,25 +95,15 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Dashboard",
+          "href": "https://plaid.com/dashboard",
+          "icon": "gauge-high"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
+    "light": "/logo/docs-logo-light.svg",
     "dark": "/logo/dark.svg"
   },
   "navbar": {
@@ -107,15 +121,18 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
   },
   "footer": {
     "socials": {

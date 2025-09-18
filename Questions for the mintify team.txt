@@ -1,0 +1,4 @@
+Questions for the mintify team:
+
+1. I can't seem to find a way to put multiple endpoints in the same page. Can I?
+2. I'm having a heck of a time just showing, say, a "Identity" group with the endpoints under it in a collapsible section. I can list the pages individually, but then they don't collapse. I can include the API file, but then it seems to want to include the tag for some reason

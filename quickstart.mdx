@@ -1,80 +1,170 @@
 ---
 title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+description: "A quick introduction to building with Plaid"
 ---
 
-## Get started in three steps
+<Frame caption="Don't like reading? Watch a video guide!">
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.youtube.com/embed/U9xa1gzyPx8"
+  title="Plaid in 3 Minutes"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+</Frame>
 
-Get your documentation site running locally and make your first customization.
-
-### Step 1: Set up your local environment
-
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
-
-### Step 2: Deploy your changes
-
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
-
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
-
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
-
-### Step 3: Go live
-
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
-
-## Next steps
-
-Now that you have your docs running, explore these key features:
-
-<CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
-</CardGroup>
+<Tip>
+Want more video tutorials? The [full getting started guide](https://www.youtube.com/watch?v=sGBvKDGgPjc) for the Quickstart app is available on YouTube.
+</Tip>
 
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+Don't want to write code? Check out the [Plaid Postman Collection](https://github.com/plaid/plaid-postman) for a no-code way to get started with Plaid's API.
 </Note>
+
+<Callout icon="id-card-clip" color="#FFC107" iconType="regular">
+Looking to get started with Identity Verification or Income Verification? For Identity Verification, check out the [Identity Verification Quickstart](https://github.com/plaid/idv-quickstart). For Income, try the [Income Verification Starter app](https://github.com/plaid/income-sample).
+ </Callout>
+
+
+### Introduction
+
+Let’s test out running Plaid locally by cloning the Quickstart app. You’ll need
+API keys, which you can receive by signing up in the [Dashboard](https://dashboard.plaid.com/developers/keys) 
+
+You'll have two different API keys, and there are two different Plaid environments. Today we'll start in the Sandbox environment. View the [API Keys](https://dashboard.plaid.com/developers/keys) section of the Dashboard to find your Sandbox secret.
+
+| API Key |                            |
+| :-------- | ------------------------------------- |
+| <Icon icon="key" size={16} /> `client_id`     | Private identifier for your team                    |
+| <Icon icon="key" size={16} /> `secret`      | Private key, one for each of the three environments  |
+
+| Environment |                            |
+| :-------- | ------------------------------------- |
+| <Icon icon="flask" size={16} /> `Sandbox`     | Get started with test credentials and life-like data                    |
+| <Icon icon="rocket" size={16} /> `Production`      | Test or launch your app with unlimited live credentials  |
+
+
+<Callout icon="message-question">
+If you get stuck at any point in the Quickstart, help is just a click away! Check the Quickstart [troubleshooting guide](https://github.com/plaid/quickstart#troubleshooting) or ask other developers in our [Stack Overflow community](https://stackoverflow.com/questions/tagged/plaid).
+
+</Callout>
+
+
+### Quickstart setup
+
+Once you have your API keys, it's time to run the Plaid Quickstart locally! The instructions below will guide you through the process of cloning the [Quickstart repository](https://github.com/plaid/quickstart), customizing the .env file with your own Plaid client ID and Sandbox secret, and finally, building and running the app.
+
+Plaid offers both Docker and non-Docker options for the Quickstart. If you don't have Docker installed, you may wish to use the non-Docker version; this path is especially recommended for Windows users who do not have Docker installations. However, if you already have Docker installed, we recommend the Docker option because it is simpler and easier to run the Quickstart. Below are instructions on setting up the Quickstart with Docker and non-Docker configurations.
+
+<Tabs>
+  <Tab title="Non-docker">
+
+## Setting up without Docker
+
+<Note>
+
+Make sure you have [npm installed](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) before following along. If you're using Windows, ensure you have a terminal capable of running basic Unix shell commands.
+
+</Note>
+
+
+<RunQuickstart product='auth,transactions' />
+
+Open a new shell and start the frontend app. Your app will be running at `http://localhost:3000`.
+
+```bash 2. Run the Quickstart frontend
+# Install dependencies
+cd quickstart/frontend
+npm install
+
+# Start the frontend app
+npm start
+
+# Go to http://localhost:3000
+```
+
+Visit localhost and log in with Sandbox credentials (typically `user_good` and
+`pass_good`, as indicated at the bottom of the page).
+
+<img
+  src='/images/quickstart_screenshot.png' 
+  alt="Plaid Quickstart guide with 'Launch Link' button to simulate user bank account integration."
+  style={{width: 500}}
+/>
+
+  </Tab>
+  <Tab title="Docker">
+
+
+
+## Setting up with Docker
+
+Docker is a software platform that packages software into standardized units called containers that have everything the software needs to run, including libraries, system tools, code, and runtime. If you don't already have Docker, you can [download it from the Docker site](https://docs.docker.com/get-docker/). Note that Windows users may need to take some additional steps, such installing a Linux environment; if you are using Windows and do not already have a Linux environment installed, we recommend selecting the non-Docker instructions instead.
+
+Once Docker is installed, launch the Docker app, then use the following commands at the command line to configure and run the Quickstart. If the `make` commands do not work, ensure that Docker is running. You may also need to prefix the `make` commands with `sudo`, depending on your environment.
+
+```bash 1. Clone and run the Quickstart
+# Note: If on Windows, run
+# git clone -c core.symlinks=true https://github.com/plaid/quickstart
+# instead to ensure correct symlink behavior
+
+git clone https://github.com/plaid/quickstart.git
+cd quickstart
+
+# Copy the .env.example file to .env, then fill
+# out PLAID_CLIENT_ID and PLAID_SECRET in .env
+cp .env.example .env
+
+# start the container for one of these languages:
+# node, python, java, ruby, or go
+
+make up language=node
+
+# Go to http://localhost:3000
+```
+
+Visit localhost and log in with Sandbox credentials (typically `user_good` and
+`pass_good`, as indicated at the bottom of the page).
+
+<img
+  src='/images/quickstart_screenshot.png' 
+          alt="Plaid Quickstart page with 'Launch Link' button to connect bank accounts via Plaid API integration."
+  style={{width: 500}}
+/>
+
+
+```bash View the logs
+$ make logs language=node
+```
+
+```bash Stop the container
+$ make stop language=node
+```
+
+  </Tab>
+  </Tabs>
+
+
+## Create your first Item
+
+Most API requests interact with an _Item_, which is a Plaid term for a login at a financial institution. A single end-user of your application might have accounts at different financial institutions, which means they would have multiple different Items. An Item is not the same as a financial institution account, although every account will be associated with an Item. For example, if a user has one login at their bank that allows them to access both their checking account and their savings account, a single Item would be associated with both of those accounts.
+
+Now that you have the Quickstart running, you’ll add your first Item in the Sandbox environment. Once you’ve opened the Quickstart app on localhost, click the **Launch Link** button and select any institution. Use the Sandbox credentials to simulate a successful login.
+
+### Sandbox credentials
+
+```bash 
+username: user_good
+password: pass_good
+If prompted to enter a 2FA code: 1234
+```
+
+Once you have entered your credentials and moved to the next screen, you have created your first Item! You can now make API calls for that Item by using the buttons in the Quickstart. In the next section, we'll explain what actually happened and how the Quickstart works.
+
+### How it works
+
+As you might have noticed, you use both a server and a client-side component to
+access the Plaid APIs. The flow looks like this:
+
+
+The first step is to create a new `link_token` by making a `/link/token/create` request and passing in the required configurations. This `link_token` is a short lived, one-time use token that authenticates your app with [Plaid Link](/docs/link), our frontend module. Several of the environment variables you configured when launching the Quickstart, such as `PLAID_PRODUCTS`, are used as parameters for the `link_token`.

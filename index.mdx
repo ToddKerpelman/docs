@@ -1,5 +1,6 @@
 ---
 title: "Welcome to the docs!"
+mode: "wide"
 description: "Plaid developer documentation home. Here you'll find guides, resources, and references you can use to build with Plaid"
 ---
 
@@ -25,7 +26,7 @@ description: "Plaid developer documentation home. Here you'll find guides, resou
 <Card
   title="API Reference"
   icon="books"
-  href="/api"
+  href="/api-reference/overview"
   cta="View reference"
 >
 Explore server-side API libraries and integrate with API endpoints
@@ -40,87 +41,192 @@ Explore server-side API libraries and integrate with API endpoints
 Link, Plaid's client-side component, helps your users connect their accounts
 </Card>
 
+</Columns>
 
+## Payments and funding
+
+<Columns cols={3}>
+
+ <Card
+    link='/docs/auth'
+        title='Auth'
+        icon='https://plaid.com/assets/img/navbar/icon-auth-v3.png'
+  >
+  Retrieve bank account information for ACH, wire, and other bank-to-bank transfers.
+  </Card>
+
+  <Card
+    link='/docs/balance'
+    title='Balance'
+    icon='https://plaid.com/assets/img/navbar/icon-balance-v3.png'
+  >
+  Retrieve real-time balance information to prevent ACH returns.
+  </Card>
+  <Card
+    link='/docs/identity'
+    title='Identity'
+    icon='https://plaid.com/assets/img/navbar/icon-identity-v3.png'
+  >
+  Verify users' financial account ownership and reduce fraud.
+  </Card>
+  <Card
+    link='/docs/signal'
+    title='Signal'
+    icon='https://plaid.com/assets/img/navbar/icon-signal-v3.png'
+  >
+  Reduce fraud and provide instant funds access by assessing the return risk of an ACH
+  </Card>
+  <Card
+    link='/docs/transfer'
+    title='Transfer'
+    icon='https://plaid.com/assets/img/navbar/icon-transfer-v3.png'
+  >
+  Send and receive money end to end with Plaid.
+  </Card>
+  <Card
+    link='/docs/investments-move'
+    title='Investments Move'
+    icon='https://plaid.com/assets/img/navbar/icon-investments-move-v3.png'
+  >
+  Get verified data for initiating an ACATS or ATON brokerage-to-brokerage transfer.
+  </Card>
+  <Card
+    link='/docs/payment-initiation'
+    title='Payments (Europe)'
+    icon='https://plaid.com/assets/img/navbar/icon-payment-initiation-v3.png'
+  >
+  Make one-time payments, recurring payments, or payouts within your app.
+  </Card>
 
 </Columns>
 
+## Financial Insights
 
-## Make it yours
+<Columns cols={3}>
 
-Design a docs site that looks great and empowers your users.
-
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
+ <Card
+    link='/docs/transactions'
+    title='Transactions'
+        icon='https://plaid.com/assets/img/navbar/icon-transactions-v3.png'
   >
-    Edit your docs locally and preview them in real time.
+  Retrieve transaction data for budgeting tools, expense management, and more.
   </Card>
+
   <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
+    link='/docs/investments'
+    title='Investments'
+        icon='https://plaid.com/assets/img/navbar/icon-investments-v3.png'
   >
-    Customize the design and colors of your site to match your brand.
+  View holdings and transactions from investment accounts.
   </Card>
+
+  <Card
+    link='/docs/liabilities'
+    title='Liabilities'
+    subtitle=' '
+    icon='https://plaid.com/assets/img/navbar/icon-liabilities-v3.png'
+  >
+  Access loan data, like balances and interest rates, for student loans, mortgages, and credit cards.
+  </Card>
+
+  <Card
+    link='/docs/enrich'
+    title='Enrich'
+        icon='https://plaid.com/assets/img/navbar/icon-enrich-v3.png'
+  >
+  Add detailed information and insights to your existing transactions data.
+  </Card>
+
+</Columns>
+
+## KYC, AML, and anti-fraud
+
+<Columns cols={3}>
+
+   <Card
+    link='/docs/identity-verification'
+    title='Identity Verification'
+        icon='https://plaid.com/assets/img/navbar/icon-idv-v3.png'
+  >
+  Global KYC compliance and anti-fraud. Verify user identity data and documents.
+  </Card>
+
+  <Card
+    link='/docs/monitor'
+    title='Monitor'
+    subtitle=' '
+    icon='https://plaid.com/assets/img/navbar/icon-monitor-v3.png'
+  >
+  Use with Identity Verification to enable sanction, PEP, and watchlist screening for anti-money laundering compliance.
+  </Card>
+
     <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
+    link='/docs/beacon'
+    title='Beacon'
+        icon='https://plaid.com/assets/img/navbar/icon-idv-v3.png'
   >
-    Organize your docs to help users find what they need and succeed with your product.
+  Join the Plaid anti-fraud network
   </Card>
+
   <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
+    link='/docs/protect'
+    title='Protect'
+        icon='https://plaid.com/assets/img/navbar/icon-layer-v3.png'
   >
-    Auto-generate API documentation from OpenAPI specifications.
+  Prevent fraud before it happens — at every step of the user lifecycle.
   </Card>
 </Columns>
 
-## Create beautiful pages
+## Instant Onboarding
 
-Everything you need to create world-class documentation.
+<Columns cols={3}>
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
+    <Card
+    link='/docs/layer'
+    title='Layer'
+        icon='https://plaid.com/assets/img/navbar/icon-layer-v3.png'
   >
-    Use MDX to style your docs pages.
+  Onboard users instantly with just a phone number.
   </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
+
 </Columns>
 
-## Need inspiration?
+## Credit and Underwriting
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+<Columns cols={3}>
+
+    <Card
+    link='/docs/check'
+    title='Consumer Report (by Plaid Check)'
+        icon='https://plaid.com/assets/img/navbar/icon-virtual-accounts-v3.png'
+  >
+  Make smarter credit and lending decisions with insights powered by Plaid Check.
+  </Card>
+
+  <Card
+    link='/docs/assets'
+    title='Assets'
+        icon='https://plaid.com/assets/img/navbar/icon-assets-v3.png'
+  >
+  Access users' financial information for loan underwriting.
+  </Card>
+
+  <Card
+    link='/docs/statements'
+    title='Statements'
+    subtitle=" "
+    icon='https://plaid.com/assets/img/navbar/icon-statements-v3.png'
+  >
+  Get PDF statements directly from the user's bank, for underwriting verification and compliance.
+  </Card>
+
+  <Card
+    link='/docs/income'
+    title='Income'
+        icon='https://plaid.com/assets/img/navbar/icon-income-v3.png'
+  >
+  Verify income and employment, for lending use cases and more.
+  </Card>
+
+  </Columns>
+

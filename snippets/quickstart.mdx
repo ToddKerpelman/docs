@@ -1,0 +1,108 @@
+#### Clone and Run Quickstart
+
+<CodeGroup>
+
+```bash Node.js
+# Note: If on Windows, run
+# git clone -c core.symlinks=true https://github.com/plaid/quickstart
+# instead to ensure correct symlink behavior
+
+git clone https://github.com/plaid/quickstart.git
+
+# Copy the .env.example file to .env, then fill
+# out PLAID_CLIENT_ID and PLAID_SECRET in .env
+cp .env.example .env
+
+cd quickstart/node
+
+# Install dependencies
+npm install
+
+# Start the backend app
+./start.sh
+```
+
+```bash Python
+# Note: If on Windows, run
+# git clone -c core.symlinks=true https://github.com/plaid/quickstart
+# instead to ensure correct symlink behavior
+
+git clone https://github.com/plaid/quickstart.git
+
+# Copy the .env.example file to .env, then fill
+# out PLAID_CLIENT_ID and PLAID_SECRET in .env
+cp .env.example .env
+
+cd quickstart/python
+
+# Note: must use python 3
+
+# For virtualenv users:
+# virtualenv venv
+# source venv/bin/activate
+pip3 install -r requirements.txt
+
+# Start the backend app
+./start.sh
+```
+
+```bash Ruby
+# Note: If on Windows, run
+# git clone -c core.symlinks=true https://github.com/plaid/quickstart
+# instead to ensure correct symlink behavior
+
+git clone https://github.com/plaid/quickstart.git
+
+# Copy the .env.example file to .env, then fill
+# out PLAID_CLIENT_ID and PLAID_SECRET in .env
+cp .env.example .env
+
+cd quickstart/ruby
+
+# Install dependencies
+bundle
+
+# Start the backend app
+./start.sh
+```
+
+```bash Java
+# Note: If on Windows, run
+# git clone -c core.symlinks=true https://github.com/plaid/quickstart
+# instead to ensure correct symlink behavior
+
+git clone https://github.com/plaid/quickstart.git
+
+# Copy the .env.example file to .env, then fill
+# out PLAID_CLIENT_ID and PLAID_SECRET in .env
+cp .env.example .env
+
+cd quickstart/java
+
+mvn clean package
+
+# Start the backend app
+./start.sh
+```
+
+```bash Go
+# Note: If on Windows, run
+# git clone -c core.symlinks=true https://github.com/plaid/quickstart
+# instead to ensure correct symlink behavior
+
+git clone https://github.com/plaid/quickstart.git
+
+# Copy the .env.example file to .env, then fill
+# out PLAID_CLIENT_ID and PLAID_SECRET in .env
+cp .env.example .env
+
+cd quickstart/go
+
+go build
+
+# Start the backend app
+./start.sh
+```
+
+</CodeGroup>
+

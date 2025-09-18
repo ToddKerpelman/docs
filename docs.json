@@ -93,7 +93,7 @@
   },
   "fonts": {
     "family": "Plaid Sans",
-    "source": "https://plaid.com/assets/fonts/PlaidSans-Regular.woff2",
+    "source": "/fonts/PlaidSans-Regular.woff2",
     "format": "woff2",
     "weight": 450
   },

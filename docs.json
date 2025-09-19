@@ -47,6 +47,12 @@
             "openapi": {
               "source": "openapi/CategoryFinancialInsights.json"
             }
+          },
+          {
+            "group": "Fundamentals",
+            "openapi": {
+              "source": "openapi/CategoryFundamentals.json"
+            }
           }
         ]
       },
